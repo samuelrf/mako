@@ -170,6 +170,7 @@ static struct msm_bus_paths grp3d_bus_scale_usecases[] = {
 		ARRAY_SIZE(grp3d_max_vectors),
 		grp3d_max_vectors,
 	},
+	
 };
 
 static struct msm_bus_scale_pdata grp3d_bus_scale_pdata = {
@@ -228,15 +229,15 @@ static struct kgsl_device_iommu_data kgsl_3d0_iommu_data[] = {
 static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 	.pwrlevel = {
 		{
-			.gpu_freq = 400000000,
+			.gpu_freq = 487500000,
 			.bus_freq = 4,
 			.io_fraction = 0,
 		},
-		{
-			.gpu_freq = 320000000,
+		/*{
+			.gpu_freq = 325000000,
 			.bus_freq = 3,
 			.io_fraction = 33,
-		},
+		},*/
 		{
 			.gpu_freq = 200000000,
 			.bus_freq = 2,
@@ -253,7 +254,7 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 		},
 	},
 	.init_level = 1,
-	.num_levels = 5,
+	.num_levels = 4,
 	.set_grp_async = NULL,
 	.idle_timeout = HZ/10,
 	.strtstp_sleepwake = true,
